@@ -45,9 +45,63 @@ if(a > 5) {
 
 
 ## 선택문
-### (optional) Java 13. switch 연산자
+### Switch-Case
+* 입력값이 정형화된 경우 다중 if문보다는 Switch-Case 문을 사용하는 것이 가독성이나, 성능면으로나 유리하다. (보통 5개부터 차이가 보임)
+```java
+int month;
+switch(month){
+	case: 1			// Case는 리터럴 또는 상수여야 한다.
+		...
+		break;		// case 1 연산만 끝나면 switch문 종료
+	case: 2
+					// break문이 없기 때문에 case 3까지 계속 진행
+	case: 3
+		break;
+	...
+	default:		// 모두 해당되지 않는 경우 default가 실행
+}
+```
+* Switch문의 표현식은 기본형 타입이나, 일부 래퍼 유형일 수 있다.
+* 케이스 값은 리터럴 또는 상수여야 한다.
+* `break`문을 통해 각 case의 연산이 끝나면 Switch 표현식을 스킵할지, 다음 Case도 실행할지 결정을 할 수 있다.
+
+### Switch문 발전과정
+
+#### JAVA 12
+* case 라벨을 쉼표를 사용해 구분할 수 있도록 지원
+```java
+public static String monthCheck(int num){ 
+	int days = switch (num) { 
+		case 1, 3, 5, 7, 8, 10, 12 :
+			break 31; 
+		case 4, 6, 9, 11 :
+			break 30; 
+		case 2 : 
+			break 28;
+		default:
+			break -1; 
+		}; 
+	return "입력하신 달은 "+days+"일 입니다."; 
+}
+```
+* 람다식 또한 지원
+```java
+public static String monthCheck(int num){
+	int days = switch (num) {
+		case 1, 3, 5, 7, 8, 10, 12 -> 31; 
+		case 4, 6, 9, 11 -> 30;
+		 case 2 -> 28; 
+		 default -> -1; 
+	}; 
+	return "입력하신 달은 "+days+"일 입니다."; 
+}
+```
+* Oracle 공식문서에서도 colon(:) 보다는 arrow case(->) 방식을 권장.
+    * 가독성
+    * 의도치 않는 fall through 방지
+
+#### JAVA 13
 https://velog.io/@nunddu/Java-Switch-Expression-in-Java-14
-* 입력값이 정형화되어있는 경우에는, if문보다 switch/case 문을 사용하는 것이 가독성면에서 유리할 수 있다.
 ```JAVA
 switch(expression){
 	case expression:
@@ -65,11 +119,8 @@ switch(expression){
 	default -> expression
 };
 ```
-* branch fall-through가 일어나지 않도록 break; 
+* 기존에는 branch fall-through가 일어나지 않도록 break를 사용해왔으나 개선된 switch문에서는 yield를 사용한다. 
 
-* Oracle 공식문서에서도 colon(:) 보다는 arrow case(->) 방식을 권장.
-    * 가독성
-    * 의도치 않는 fall through 방지
 
 
 ## 반복문
