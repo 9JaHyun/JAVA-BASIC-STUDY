@@ -298,4 +298,4 @@ System.out.println(member1.getName());  // newMember1
 
 
 ### 연산자 우선 순위
-[!Operitor_priority](\img\operatorPriority.png)
+<img src = "https://github.com/9JaHyun/JAVA-BASIC-STUDY/blob/main/CH3/img/operatorPriority.png">
