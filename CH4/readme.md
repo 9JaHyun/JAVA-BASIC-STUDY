@@ -101,6 +101,7 @@ public static String monthCheck(int num){
     * 의도치 않는 fall through 방지
 
 #### JAVA 13
+* JAVA 13부터는 Switch Operator로 탄생되었다.
 https://velog.io/@nunddu/Java-Switch-Expression-in-Java-14
 ```JAVA
 switch(expression){
@@ -124,4 +125,101 @@ switch(expression){
 
 
 ## 반복문
+* 조건이 참인 동안 계속해서 블록을 반복적으로 실행하는데 사용.
 
+### for문
+* 변수가 조건식에 만족할 때 해당 실행문을 실행하고, 만족하지 않을 경우 증감식을 통해 변수를 변화
+* 반복 횟수가 고정되어 있는 것이 특징.
+
+```java
+for(초기화; 조건식; 증감식){
+	실행 블록
+}
+```
+
+* 예시
+```java
+for (int i = 0; i < 10; i++) {
+    System.out.println("i = " + i);
+}
+```
+* 배열
+```java
+String[] array = {"이것은", "배열", "입니다."};
+for (int i = 0; i < array.length; i++) {
+    System.out.println(array[i]);
+}
+```
+* 향상된 for문
+* 배열을 **순회**해야 하는 경우 사용되는 방식
+```java
+String[] array = {"이것은", "배열", "입니다."};
+for (String str : array) {	// for(int i = 0; i < array.length; i++)와 같다.
+    System.out.println(str);
+}
+```
+#### 추가1. 무한루프
+* 아무 조건식을 쓰지 않으면 무한루프
+```java
+for( ; ;){
+	System.out.println("무한루프");
+}
+```
+
+
+### while문
+* 괄호안에 주어진 boolean값의 상태 변화에 따라, 반복문을 제어.
+* 괄호안의 조건식이 거짓이 될 때까지 계속 반복문을 실행.
+```JAVA
+while(표현식) {
+	실행 블록
+}
+```
+
+* 예시1
+```JAVA
+int i = 0;
+int sum = 0;
+while(i < 5){
+	i++;
+	sum += i;
+	System.out.printf("%d 번째 반복문 : sum = %d \n", i, sum);
+}
+```
+### do-while문
+* while문의 방식을 살짝 수정한 방식
+* 특징으로는 조건식이 참이든 아니든 먼저 실행을 함.
+```JAVA
+boolean condition = false;
+do {
+    System.out.println("Do는 조건문이 어찌되든 일단 실행");
+} while(condition);
+```
+
+
+### break
+* 반복을 종료할 수 있는 키워드
+* `while`. `for`, `switch문` 모두 사용가능하다.
+```java
+    public static void main(String[] args) {
+        int num = 0;
+        while(true){
+            num++;
+			if(num == 25) break;        // 25가 되면 반복문 종료
+            System.out.println(num);
+        }
+    }
+```
+
+### continue
+* 반복문을 종료하지는 않고, 반복 한번을 skip하는 키워드
+ ```java
+    public static void main(String[] args) {
+        int num = 0;
+        while(num < 30){
+            num++;
+			if(num == 25) continue;        // 25는 출력하지 않음!
+            System.out.println(num);
+        }
+    }
+```

@@ -26,25 +26,24 @@ public class SwitchStatement {
     }
 
     private static void nestedSwitch() {
-        int switchCase = 5;
-        switch(switchCase){
-            case 1 :
-                // code inside the case value1
+        String date = "일요일";
+        switch(date){
+            case "평일" :
+                System.out.println("마트 안쉬는 날");
                 break; // optional
             
-            case 2 :
-                // code inside the case value2 
+            case "토요일" :
+                System.out.println("마트 안쉬는 날");
                 break; // optional
-            case 3 : 
+            case "일요일" : 
 
-            switch(variable/expression)
-            {
-                case valueOne :
-                    // code inside the case valueOne 
+            switch(date){
+                case "홀수번 째" :
+                    System.out.println("마트 안쉬는 날");
                     break; // optional
             
-                case valueTwo :
-                    // code inside the case valueTwo 
+                case "짝수번 째" :
+                System.out.println("마트 쉬는 날");
                     break; // optional
                 default : 
                     // code inside the default case .
