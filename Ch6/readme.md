@@ -347,4 +347,4 @@ public class thisSample{
 ```
 
 ## 패키지와 접근 제한자
-["access"](img/access.png)
+<img src = "https://github.com/9JaHyun/JAVA-BASIC-STUDY/blob/main/Ch6/img/access.png">
