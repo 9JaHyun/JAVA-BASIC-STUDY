@@ -92,7 +92,7 @@ public class ClassField {
     }
 }
 ```
-[필드.png](img/field.png)
+<img src = "https://github.com/9JaHyun/JAVA-BASIC-STUDY/blob/main/Ch6/img/field.png">
 #### 인스턴스 필드
 * 인스턴스를 생성해야만 사용할 수 있는 필드.
 
@@ -262,7 +262,7 @@ public class MethodSample {
     }
 }
 ```
-[필드.png](img/staticMethod.png)
+<img src = "https://github.com/9JaHyun/JAVA-BASIC-STUDY/blob/main/Ch6/img/staticMethod.png">
 
 ## 클래스 생성 방법
 ### 선언
