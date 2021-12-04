@@ -103,6 +103,15 @@ public static void main(String[] args) {
     System.out.println(value);  // overflow : -1454759936
 ```
 
+#### 산술연산자 중 주의사항 (OverFlow)
+* 피연산자의 타입이 표현할 수 있는 범위를 벗어나게 되면 변형이 발생한다. 가장 대표적인 상황이 OverFlow 상황이다.
+* OverFlow란 타입이 표현할 수 있는 가장 큰 값을 넘어가게 되면 다시 그 타입이 표현할 수 있는 최소값으로 돌아가는 것을 말한다.
+* 비트연산을 떠올리면 이해하기가 편하다.
+
+<img src = "https://github.com/9JaHyun/JAVA-BASIC-STUDY/blob/main/CH3/img/overflow.png">
+* 가장 큰 수 `01111111(2) + 1` 을 실시하면 `10000000(2)`이 된다. 이는 최소값 -128을 의미한다.
+
+
 #### 추가 (중간값 구하기)
 * 보통 중간값 식은 `(start + end) / 2`
 * 오버플로우의 문제가 발생할 수 있다.
