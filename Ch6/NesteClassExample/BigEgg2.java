@@ -1,3 +1,4 @@
+package NesteClassExample;
 public class BigEgg2 extends Egg2 {
 
     public class Yolk extends Egg2.Yolk {

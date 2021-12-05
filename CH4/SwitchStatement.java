@@ -7,21 +7,21 @@ public class SwitchStatement {
         int switchCase = 1;
         switch(switchCase)
         {
-          case 1 :
-          case 2 :
-          case 3 :
-          case 4 :
+            case 1 :
+            case 2 :
+            case 3 :
+            case 4 :
              // 실행 코드
-             break; 
+                break; 
           
-          case 5 :
-          case 6 :
-          case 7 :
-          case 8 :
+            case 5 :
+            case 6 :
+            case 7 :
+            case 8 :
               // 실행 코드
-             break; 
-           default : 
-                  // 실행 코드
+            break; 
+            default : 
+                // 실행 코드
        }
     }
 

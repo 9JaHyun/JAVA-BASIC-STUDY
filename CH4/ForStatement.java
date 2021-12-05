@@ -5,13 +5,13 @@ public class ForStatement{
     }
 
     private static void arrayForStatement() {
-        String[] str = {"이것은", "배열", "입니다."};
-        for (int i = 0; i < str.length; i++) {
-            System.out.println(str[i]);
+        String[] array = {"이것은", "배열", "입니다."};
+        for (int i = 0; i < array.length; i++) {
+            System.out.println(array[i]);
         }
 
-        for (String string : str) {
-            System.out.println(string);
+        for (String element : array) {
+            System.out.println(element);
         }
     }
 

@@ -1,3 +1,4 @@
+package NesteClassExample;
 class Egg2 {
     public static void print(String x) {
         System.out.println(x);
