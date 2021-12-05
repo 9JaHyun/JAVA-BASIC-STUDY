@@ -3,6 +3,8 @@
 * 기본형 타입을 제외한 타입
 * 리터럴을 가지고 있는 기본형 타입과 다르게 참조형 타입은 그 데이터에 대한 참조 주소를 가지고 있다.
 
+<img src = "https://github.com/9JaHyun/JAVA-BASIC-STUDY/blob/main/CH5/img/2.png">
+
 # 배열
 * `[]`만 붙이면 장땡이다.
 * int[] : int 타입이 요소(element)로 들어가는 배열
